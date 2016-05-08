@@ -12,6 +12,7 @@
 		8ACC5DCB1CDB14BB00C6D178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC5DC91CDB14BB00C6D178 /* Main.storyboard */; };
 		8ACC5DCD1CDB14BB00C6D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC5DCC1CDB14BB00C6D178 /* Assets.xcassets */; };
 		8ACC5DD01CDB14BB00C6D178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC5DCE1CDB14BB00C6D178 /* LaunchScreen.storyboard */; };
+		8ACC5DDB1CDB726C00C6D178 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC5DDA1CDB726C00C6D178 /* beep.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		8ACC5DCC1CDB14BB00C6D178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ACC5DCF1CDB14BB00C6D178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ACC5DD11CDB14BB00C6D178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ACC5DD71CDB70CD00C6D178 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8ACC5DDA1CDB726C00C6D178 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 		8ACC5DB91CDB14B300C6D178 = {
 			isa = PBXGroup;
 			children = (
+				8ACC5DD71CDB70CD00C6D178 /* AudioToolbox.framework */,
 				8ACC5DC41CDB14B300C6D178 /* TimeCounter */,
 				8ACC5DC31CDB14B300C6D178 /* Products */,
 			);
@@ -54,6 +58,7 @@
 		8ACC5DC41CDB14B300C6D178 /* TimeCounter */ = {
 			isa = PBXGroup;
 			children = (
+				8ACC5DDA1CDB726C00C6D178 /* beep.mp3 */,
 				8ACC5DC51CDB14BB00C6D178 /* AppDelegate.swift */,
 				8ACC5DC71CDB14BB00C6D178 /* ViewController.swift */,
 				8ACC5DC91CDB14BB00C6D178 /* Main.storyboard */,
@@ -125,6 +130,7 @@
 			files = (
 				8ACC5DD01CDB14BB00C6D178 /* LaunchScreen.storyboard in Resources */,
 				8ACC5DCD1CDB14BB00C6D178 /* Assets.xcassets in Resources */,
+				8ACC5DDB1CDB726C00C6D178 /* beep.mp3 in Resources */,
 				8ACC5DCB1CDB14BB00C6D178 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
