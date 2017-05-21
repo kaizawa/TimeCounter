@@ -23,8 +23,8 @@ class ViewController: UIViewController {
         interval.text = Int(intervalStepper.value).description
         rap.text = Int(rapStepper.value).description
 
-        if let soundUrl = NSBundle.mainBundle().URLForResource("beep", withExtension: "mp3"){
-            AudioServicesCreateSystemSoundID(soundUrl, &soundId)
+        if let soundUrl = Bundle.main.url(forResource: "beep", withExtension: "mp3"){
+            AudioServicesCreateSystemSoundID(soundUrl as CFURL, &soundId)
         }
     }
 
@@ -40,11 +40,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLeft: UILabel!
     @IBOutlet weak var rapLeft: UILabel!
     
-    @IBAction func startAction(sender: AnyObject) {
+    @IBAction func startAction(_ sender: AnyObject) {
 
         stopped = false
 
-        NSOperationQueue().addOperationWithBlock({() -> Void in
+        OperationQueue().addOperation({() -> Void in
             
             var first:Bool = true
             
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             while(rapCount > 0){
                 
                 // decrement rap count
-                NSOperationQueue.mainQueue().addOperationWithBlock({() -> Void in
+                OperationQueue.main.addOperation({() -> Void in
                     self.rapLeft.text = rapCount.description
                 })
 
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
                     var intervalCount = UInt32(self.interval.text!)!
                     for _ in 0...intervalCount - 1 {
 
-                        NSOperationQueue.mainQueue().addOperationWithBlock({() -> Void in
+                        OperationQueue.main.addOperation({() -> Void in
                             self.timeLeft.text = String(intervalCount)
                         })
                         
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
                         break;
                     }
                  
-                    NSOperationQueue.mainQueue().addOperationWithBlock({() -> Void in
+                    OperationQueue.main.addOperation({() -> Void in
                         self.timeLeft.text = timeCount.description
                     })
                     
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
                 rapCount -= 1
 
             }
-            NSOperationQueue.mainQueue().addOperationWithBlock({() -> Void in
+            OperationQueue.main.addOperation({() -> Void in
                 self.timeLeft.text = String("0")
                 self.rapLeft.text = String("0")
             })
@@ -113,21 +113,21 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func stopAction(sender: AnyObject) {
+    @IBAction func stopAction(_ sender: AnyObject) {
         
         stopped = true;
     }
     
     @IBOutlet weak var durationStepper: UIStepper!
 
-    @IBAction func dureationStepperValueChanged(sender: UIStepper) {
+    @IBAction func dureationStepperValueChanged(_ sender: UIStepper) {
         
         duration.text = Int(sender.value).description
     }
     
     @IBOutlet weak var intervalStepper: UIStepper!
     
-    @IBAction func intervalStepperValueChanged(sender: UIStepper) {
+    @IBAction func intervalStepperValueChanged(_ sender: UIStepper) {
         
         interval.text = Int(sender.value).description
     }
@@ -135,70 +135,70 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var rapStepper: UIStepper!
     
-    @IBAction func rapStepperValueChanged(sender: UIStepper) {
+    @IBAction func rapStepperValueChanged(_ sender: UIStepper) {
         
         rap.text = Int(sender.value).description
     }
     
-    @IBAction func presetDuration60sec(sender: AnyObject) {
+    @IBAction func presetDuration60sec(_ sender: AnyObject) {
         presetDuration(60)
     }
     
-    @IBAction func presetDuration90sec(sender: AnyObject) {
+    @IBAction func presetDuration90sec(_ sender: AnyObject) {
         presetDuration(90)
     }
     
-    @IBAction func presetDuration120sec(sender: AnyObject) {
+    @IBAction func presetDuration120sec(_ sender: AnyObject) {
         presetDuration(120)
     }
 
-    @IBAction func presetDuration180sec(sender: AnyObject) {
+    @IBAction func presetDuration180sec(_ sender: AnyObject) {
         presetDuration(180)
     }
     
-    func presetDuration(sec : Double){
+    func presetDuration(_ sec : Double){
         duration.text = String(Int(sec))
         durationStepper.value = sec
     }
 
-    @IBAction func presetInterval5sec(sender: AnyObject) {
+    @IBAction func presetInterval5sec(_ sender: AnyObject) {
         presetInterval(5)
     }
     
-    @IBAction func presetInterval10sec(sender: AnyObject) {
+    @IBAction func presetInterval10sec(_ sender: AnyObject) {
         presetInterval(10)
     }
     
-    @IBAction func presetInterval20sec(sender: AnyObject) {
+    @IBAction func presetInterval20sec(_ sender: AnyObject) {
         presetInterval(20)
     }
     
-    @IBAction func presetInterval30sec(sender: AnyObject) {
+    @IBAction func presetInterval30sec(_ sender: AnyObject) {
         presetInterval(30)
     }
     
-    func presetInterval(sec : Double){
+    func presetInterval(_ sec : Double){
         interval.text = String(Int(sec))
         intervalStepper.value = sec
     }
     
-    @IBAction func presetRap1(sender: AnyObject) {
+    @IBAction func presetRap1(_ sender: AnyObject) {
         presetRap(1)
     }
     
-    @IBAction func presetRap2(sender: AnyObject) {
+    @IBAction func presetRap2(_ sender: AnyObject) {
         presetRap(2)
     }
     
-    @IBAction func presetRap3(sender: AnyObject) {
+    @IBAction func presetRap3(_ sender: AnyObject) {
         presetRap(3)
     }
     
-    @IBAction func presetRap5(sender: AnyObject) {
+    @IBAction func presetRap5(_ sender: AnyObject) {
         presetRap(5)
     }
 
-    func presetRap(count : Double){
+    func presetRap(_ count : Double){
         rap.text = String(Int(count))
         rapStepper.value = count
     }
