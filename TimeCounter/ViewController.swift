@@ -49,8 +49,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var duration: UITextField!
     @IBOutlet weak var rap: UITextField!
     
-    @IBOutlet weak var timeLeft: UILabel!
+    @IBOutlet weak var minLeft: UILabel!
+    @IBOutlet weak var secLeft: UILabel!
     @IBOutlet weak var rapLeft: UILabel!
+    @IBOutlet weak var colon: UILabel!
+    @IBOutlet weak var message: UILabel!
     
     @IBAction func startAction(_ sender: AnyObject) {
 
@@ -75,10 +78,13 @@ class ViewController: UIViewController {
                 } else {
                     
                     var intervalCount = UInt32(self.interval.text!)!
+                    OperationQueue.main.addOperation({() -> Void in
+                        self.message.text = "インターバル"
+                    })
                     for _ in 0...intervalCount - 1 {
 
                         OperationQueue.main.addOperation({() -> Void in
-                            self.timeLeft.text = String(intervalCount)
+                            self.secLeft.text = String(intervalCount)
                         })
                         
                         if(self.stopped){
@@ -87,6 +93,9 @@ class ViewController: UIViewController {
                         sleep(1)
                         intervalCount -= 1
                     }
+                    OperationQueue.main.addOperation({() -> Void in
+                        self.message.text = ""
+                    })
                     AudioServicesPlaySystemSoundWithCompletion(self.beepSoundId){ () -> Void in }
                 }
                 
@@ -99,7 +108,21 @@ class ViewController: UIViewController {
                     }
                  
                     OperationQueue.main.addOperation({() -> Void in
-                        self.timeLeft.text = timeCount.description
+                        var sec:Int = 0
+                        var min:Int = 0
+                        sec = timeCount % 60
+                        if(timeCount >= 60) {
+                            min = timeCount / 60
+                            self.minLeft.isHidden = false
+                            self.colon.isHidden = false
+                            self.secLeft.text = NSString(format: "%02d", sec) as String
+                        } else {
+                            self.minLeft.isHidden = true
+                            self.colon.isHidden = true
+                            self.secLeft.text = NSString(format: "%d", sec) as String
+                        }
+
+                        self.minLeft.text = NSString(format: "%d", min) as String
                     })
                     
                     if(timeCount == 0){
@@ -118,8 +141,11 @@ class ViewController: UIViewController {
 
             }
             OperationQueue.main.addOperation({() -> Void in
-                self.timeLeft.text = String("0")
+                self.minLeft.text = String("00")
+                self.secLeft.text = String("00")
                 self.rapLeft.text = String("0")
+                self.colon.isHidden = false
+                self.minLeft.isHidden = false
             })
         })
         
