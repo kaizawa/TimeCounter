@@ -8,12 +8,13 @@
 
 import UIKit
 import AudioToolbox
+import AVFoundation
 
 class ViewController: UIViewController {
     
     
     var stopped : Bool = false
-    var soundId : SystemSoundID = 1000 // default sound
+    var beepSoundId : SystemSoundID = 1000 // default sound
 
     override func viewDidLoad() {
         
@@ -24,8 +25,19 @@ class ViewController: UIViewController {
         rap.text = Int(rapStepper.value).description
 
         if let soundUrl = Bundle.main.url(forResource: "beep", withExtension: "mp3"){
-            AudioServicesCreateSystemSoundID(soundUrl as CFURL, &soundId)
+            AudioServicesCreateSystemSoundID(soundUrl as CFURL, &beepSoundId)
         }
+
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            // set category to play sound in background
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            // enable audio session
+            try audioSession.setActive(true)
+        } catch  {
+            fatalError("failed to setup audio session")
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +87,7 @@ class ViewController: UIViewController {
                         sleep(1)
                         intervalCount -= 1
                     }
-                    AudioServicesPlaySystemSoundWithCompletion(self.soundId){ () -> Void in }
+                    AudioServicesPlaySystemSoundWithCompletion(self.beepSoundId){ () -> Void in }
                 }
                 
                 var timeCount:Int = (Int(self.duration.text!))!
@@ -100,7 +112,7 @@ class ViewController: UIViewController {
                 if(self.stopped){
                     break
                 }
-                AudioServicesPlaySystemSoundWithCompletion(self.soundId){ () -> Void in }
+                AudioServicesPlaySystemSoundWithCompletion(self.beepSoundId){ () -> Void in }
 
                 rapCount -= 1
 
