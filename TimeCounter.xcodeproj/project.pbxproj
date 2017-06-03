@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A65238B1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A65238A1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf */; };
 		8ACC5DC61CDB14BB00C6D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC5DC51CDB14BB00C6D178 /* AppDelegate.swift */; };
 		8ACC5DC81CDB14BB00C6D178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC5DC71CDB14BB00C6D178 /* ViewController.swift */; };
 		8ACC5DCB1CDB14BB00C6D178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC5DC91CDB14BB00C6D178 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A65238A1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Bold.ttf"; sourceTree = "<group>"; };
 		8ACC5DC21CDB14B300C6D178 /* TimeCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACC5DC51CDB14BB00C6D178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ACC5DC71CDB14BB00C6D178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -58,6 +60,7 @@
 		8ACC5DC41CDB14B300C6D178 /* TimeCounter */ = {
 			isa = PBXGroup;
 			children = (
+				8A65238A1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf */,
 				8ACC5DDA1CDB726C00C6D178 /* beep.mp3 */,
 				8ACC5DC51CDB14BB00C6D178 /* AppDelegate.swift */,
 				8ACC5DC71CDB14BB00C6D178 /* ViewController.swift */,
@@ -137,6 +140,7 @@
 			files = (
 				8ACC5DD01CDB14BB00C6D178 /* LaunchScreen.storyboard in Resources */,
 				8ACC5DCD1CDB14BB00C6D178 /* Assets.xcassets in Resources */,
+				8A65238B1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf in Resources */,
 				8ACC5DDB1CDB726C00C6D178 /* beep.mp3 in Resources */,
 				8ACC5DCB1CDB14BB00C6D178 /* Main.storyboard in Resources */,
 			);
