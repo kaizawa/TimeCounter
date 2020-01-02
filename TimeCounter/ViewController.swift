@@ -12,22 +12,45 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    enum Status {
+        case STOPPED
+        case STARTED
+        case SUSPENDED
+        case INTERVAL
+    }
     
-    var stopped : Bool = false
+    //var stopped : Bool = false
     var beepSoundId : SystemSoundID = 1000 // default sound
+    var status : Status = Status.STOPPED
+    var timeCount:Int = 0
+    var rapCount:Int = 0
+    var first:Bool = true
+    var intervalCount: UInt32 = 0;
 
-    override func viewDidLoad() {
-        
+    @IBOutlet weak var minLeft: UILabel!
+    @IBOutlet weak var secLeft: UILabel!
+    @IBOutlet weak var rapLeft: UILabel!
+    @IBOutlet weak var colon: UILabel!
+    @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+
+    @IBOutlet weak var minute: PickerTextField!
+    @IBOutlet weak var second: PickerTextField!
+    @IBOutlet weak var interval: PickerTextField!
+    @IBOutlet weak var rap: PickerTextField!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        self.minute.setup(60)
+        self.second.setup(60)
+        self.interval.setup(60)
+        self.rap.setup(10)
         
-        duration.text = Int(durationStepper.value).description
-        interval.text = Int(intervalStepper.value).description
-        rap.text = Int(rapStepper.value).description
-
         if let soundUrl = Bundle.main.url(forResource: "beep", withExtension: "mp3"){
             AudioServicesCreateSystemSoundID(soundUrl as CFURL, &beepSoundId)
         }
-
+        
         let audioSession = AVAudioSession.sharedInstance()
         do {
             // set category to play sound in background
@@ -37,82 +60,109 @@ class ViewController: UIViewController {
         } catch  {
             fatalError("failed to setup audio session")
         }
-
     }
-
+  
     override func didReceiveMemoryWarning() {
-
+        
         super.didReceiveMemoryWarning()
     }
-
-    @IBOutlet weak var interval: UITextField!
-    @IBOutlet weak var duration: UITextField!
-    @IBOutlet weak var rap: UITextField!
-    
-    @IBOutlet weak var minLeft: UILabel!
-    @IBOutlet weak var secLeft: UILabel!
-    @IBOutlet weak var rapLeft: UILabel!
-    @IBOutlet weak var colon: UILabel!
-    @IBOutlet weak var message: UILabel!
     
     @IBAction func startAction(_ sender: AnyObject) {
 
-        stopped = false
-
+        //stopped = false
+        if(status == Status.STOPPED) {
+            
+            OperationQueue.main.addOperation({() -> Void in
+                self.startButton.setTitle("一時停止", for: .normal)
+            })
+            self.timeCount = (Int(self.minute.text!))! * 60 + (Int(self.second.text!))!
+            self.rapCount = (Int(self.rap.text!))!
+            self.intervalCount = (UInt32(self.interval.text!))!
+            status = Status.STARTED
+        }
+        else if(status == Status.STARTED) {
+            
+            OperationQueue.main.addOperation({() -> Void in
+                self.startButton.setTitle("再開", for: .normal)
+            })
+            status = Status.SUSPENDED
+            return
+        }
+        else if(status == Status.SUSPENDED) {
+            
+            OperationQueue.main.addOperation({() -> Void in
+                self.startButton.setTitle("一時停止", for: .normal)
+            })
+            status = Status.STARTED
+        }
+        
         OperationQueue().addOperation({() -> Void in
             
-            var first:Bool = true
+                self.countDown()
+        })
+    }
+    
+    func countDownInterval() {
+        
+        OperationQueue.main.addOperation({() -> Void in
+            self.message.text = "インターバル"
+        })
             
-            var rapCount:Int = (Int(self.rap.text!))!
+        while( self.intervalCount > 0) {
             
-            while(rapCount > 0){
+                OperationQueue.main.addOperation({() -> Void in
+                    self.secLeft.text = String(self.intervalCount)
+                })
+                
+                if(self.status == Status.STOPPED){
+                    break
+                } else if(self.status == Status.SUSPENDED){
+                    return
+                }
+                sleep(1)
+                self.intervalCount -= 1
+        }
+            
+        OperationQueue.main.addOperation({() -> Void in
+                
+            self.status = Status.STARTED
+            self.message.text = ""
+            self.intervalCount = (UInt32(self.interval.text!))!
+            self.timeCount = (Int(self.minute.text!))! * 60 + (Int(self.second.text!))!
+        })
+            
+        AudioServicesPlaySystemSoundWithCompletion(self.beepSoundId){ () -> Void in }
+    }
+    
+    func countDown() {
+        
+        while(self.rapCount > 0){
                 
                 // decrement rap count
                 OperationQueue.main.addOperation({() -> Void in
-                    self.rapLeft.text = rapCount.description
+                    self.rapLeft.text = self.rapCount.description
                 })
 
-                // for the second or later iteration, sound beep.
-                if(first){
-                    first = false;
-                } else {
-                    
-                    var intervalCount = UInt32(self.interval.text!)!
-                    OperationQueue.main.addOperation({() -> Void in
-                        self.message.text = "インターバル"
-                    })
-                    for _ in 0...intervalCount - 1 {
+                if(self.status == Status.INTERVAL) {
 
-                        OperationQueue.main.addOperation({() -> Void in
-                            self.secLeft.text = String(intervalCount)
-                        })
-                        
-                        if(self.stopped){
-                            break
-                        }
-                        sleep(1)
-                        intervalCount -= 1
-                    }
-                    OperationQueue.main.addOperation({() -> Void in
-                        self.message.text = ""
-                    })
-                    AudioServicesPlaySystemSoundWithCompletion(self.beepSoundId){ () -> Void in }
+                    self.countDownInterval()
                 }
-                
-                var timeCount:Int = (Int(self.duration.text!))!
-                
-                while(timeCount >= 0){
+            
+                while(self.timeCount >= 0){
                     
-                    if(self.stopped){
+                    if(self.status == Status.STOPPED){
                         break;
+                    } else if (self.status == Status.SUSPENDED) {
+                        return
                     }
                  
                     OperationQueue.main.addOperation({() -> Void in
+                        
                         var sec:Int = 0
                         var min:Int = 0
-                        sec = timeCount % 60
-                        if(timeCount >= 60) {
-                            min = timeCount / 60
+                        sec = self.timeCount % 60
+                        if(self.timeCount >= 60) {
+                            min = self.timeCount / 60
                             self.minLeft.isHidden = false
                             self.colon.isHidden = false
                             self.secLeft.text = NSString(format: "%02d", sec) as String
@@ -125,78 +175,62 @@ class ViewController: UIViewController {
                         self.minLeft.text = NSString(format: "%d", min) as String
                     })
                     
-                    if(timeCount == 0){
+                    if(self.timeCount == 0){
                         break
                     }
                     sleep(1)
-                    timeCount -= 1
+                    self.timeCount -= 1
                 }
-                
-                if(self.stopped){
-                    break
-                }
+            
                 AudioServicesPlaySystemSoundWithCompletion(self.beepSoundId){ () -> Void in }
 
-                rapCount -= 1
+                self.status = Status.INTERVAL
+                self.rapCount -= 1
+        }
+        self.reset()
+    }
+    
+    func reset () {
 
-            }
-            OperationQueue.main.addOperation({() -> Void in
-                self.minLeft.text = String("00")
-                self.secLeft.text = String("00")
-                self.rapLeft.text = String("0")
-                self.colon.isHidden = false
-                self.minLeft.isHidden = false
-            })
+        OperationQueue.main.addOperation({() -> Void in
+            
+            self.minLeft.text = String("00")
+            self.secLeft.text = String("00")
+            self.rapLeft.text = String("0")
+            self.colon.isHidden = false
+            self.minLeft.isHidden = false
+            self.first = true
+            self.message.text = ""
+            self.intervalCount = 0
+            self.status = Status.STOPPED
+            self.startButton.setTitle("スタート", for: .normal)
         })
-        
     }
 
     @IBAction func stopAction(_ sender: AnyObject) {
         
-        stopped = true;
+        self.status = Status.STOPPED
     }
     
-    @IBOutlet weak var durationStepper: UIStepper!
-
-    @IBAction func dureationStepperValueChanged(_ sender: UIStepper) {
-        
-        duration.text = Int(sender.value).description
+    @IBAction func presetMinute60sec(_ sender: AnyObject) {
+        presetMinute(60)
     }
     
-    @IBOutlet weak var intervalStepper: UIStepper!
-    
-    @IBAction func intervalStepperValueChanged(_ sender: UIStepper) {
-        
-        interval.text = Int(sender.value).description
+    @IBAction func presetMinute90sec(_ sender: AnyObject) {
+        presetMinute(90)
     }
     
-
-    @IBOutlet weak var rapStepper: UIStepper!
-    
-    @IBAction func rapStepperValueChanged(_ sender: UIStepper) {
-        
-        rap.text = Int(sender.value).description
-    }
-    
-    @IBAction func presetDuration60sec(_ sender: AnyObject) {
-        presetDuration(60)
-    }
-    
-    @IBAction func presetDuration90sec(_ sender: AnyObject) {
-        presetDuration(90)
-    }
-    
-    @IBAction func presetDuration120sec(_ sender: AnyObject) {
-        presetDuration(120)
+    @IBAction func presetMinute120sec(_ sender: AnyObject) {
+        presetMinute(120)
     }
 
-    @IBAction func presetDuration180sec(_ sender: AnyObject) {
-        presetDuration(180)
+    @IBAction func presetMinute180sec(_ sender: AnyObject) {
+        presetMinute(180)
     }
     
-    func presetDuration(_ sec : Double){
-        duration.text = String(Int(sec))
-        durationStepper.value = sec
+    func presetMinute(_ sec : Double)
+    {
+        minute.picker.selectRow(Int(sec), inComponent: 0, animated: true)
     }
 
     @IBAction func presetInterval5sec(_ sender: AnyObject) {
@@ -215,9 +249,9 @@ class ViewController: UIViewController {
         presetInterval(30)
     }
     
-    func presetInterval(_ sec : Double){
-        interval.text = String(Int(sec))
-        intervalStepper.value = sec
+    func presetInterval(_ sec : Double)
+    {
+        interval.picker.selectRow(Int(sec), inComponent: 0, animated: true)
     }
     
     @IBAction func presetRap1(_ sender: AnyObject) {
@@ -236,9 +270,9 @@ class ViewController: UIViewController {
         presetRap(5)
     }
 
-    func presetRap(_ count : Double){
-        rap.text = String(Int(count))
-        rapStepper.value = count
+    func presetRap(_ count : Double)
+    {
+        rap.picker.selectRow(Int(count), inComponent: 0, animated: true)
     }
 }
 

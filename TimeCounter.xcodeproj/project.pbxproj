@@ -14,6 +14,7 @@
 		8ACC5DCD1CDB14BB00C6D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC5DCC1CDB14BB00C6D178 /* Assets.xcassets */; };
 		8ACC5DD01CDB14BB00C6D178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC5DCE1CDB14BB00C6D178 /* LaunchScreen.storyboard */; };
 		8ACC5DDB1CDB726C00C6D178 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC5DDA1CDB726C00C6D178 /* beep.mp3 */; };
+		8AEE929523BD7CFF0085822A /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE929423BD7CFF0085822A /* PickerTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8ACC5DD11CDB14BB00C6D178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ACC5DD71CDB70CD00C6D178 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8ACC5DDA1CDB726C00C6D178 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
+		8AEE929423BD7CFF0085822A /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +65,12 @@
 				8A65238A1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf */,
 				8ACC5DDA1CDB726C00C6D178 /* beep.mp3 */,
 				8ACC5DC51CDB14BB00C6D178 /* AppDelegate.swift */,
-				8ACC5DC71CDB14BB00C6D178 /* ViewController.swift */,
 				8ACC5DC91CDB14BB00C6D178 /* Main.storyboard */,
 				8ACC5DCC1CDB14BB00C6D178 /* Assets.xcassets */,
 				8ACC5DCE1CDB14BB00C6D178 /* LaunchScreen.storyboard */,
 				8ACC5DD11CDB14BB00C6D178 /* Info.plist */,
+				8ACC5DC71CDB14BB00C6D178 /* ViewController.swift */,
+				8AEE929423BD7CFF0085822A /* PickerTextField.swift */,
 			);
 			path = TimeCounter;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				8ACC5DC81CDB14BB00C6D178 /* ViewController.swift in Sources */,
 				8ACC5DC61CDB14BB00C6D178 /* AppDelegate.swift in Sources */,
+				8AEE929523BD7CFF0085822A /* PickerTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +281,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 469ZL76DAW;
 				INFOPLIST_FILE = TimeCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cafeform.RepTimeCounter;
@@ -295,7 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 469ZL76DAW;
 				INFOPLIST_FILE = TimeCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cafeform.RepTimeCounter;

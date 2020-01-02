@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,64 +23,54 @@
                         <viewControllerLayoutGuide type="bottom" id="drP-On-4g4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-k4-Q29">
-                                <rect key="frame" x="3" y="23" width="314" height="542"/>
+                                <rect key="frame" x="-1" y="23" width="377" height="641"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sc2-cG-KqR">
-                                        <rect key="frame" x="3" y="3" width="308" height="536"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sc2-cG-KqR">
+                                        <rect key="frame" x="3" y="3" width="371" height="635"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOg-Ky-yzx">
-                                                <rect key="frame" x="8" y="198" width="292" height="176"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-2S-ILP">
+                                                <rect key="frame" x="10" y="427" width="351" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOg-Ky-yzx">
+                                                <rect key="frame" x="25.5" y="437" width="320" height="130"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwy-TC-ys4">
-                                                        <rect key="frame" x="167" y="72" width="132" height="104"/>
+                                                        <rect key="frame" x="167" y="35" width="132" height="104"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="77"/>
                                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X68-NX-SLE">
-                                                        <rect key="frame" x="37" y="72" width="132" height="104"/>
+                                                        <rect key="frame" x="37" y="35" width="132" height="104"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="77"/>
                                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-YM-TFb">
-                                                        <rect key="frame" x="242" y="8" width="42" height="45"/>
+                                                        <rect key="frame" x="242" y="-7" width="42" height="45"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="30"/>
                                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLC-3u-Ajc">
-                                                        <rect key="frame" x="0.0" y="82" width="58" height="86"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="残り時間">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="HiraginoSans-W3"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJv-u6-7xX">
-                                                        <rect key="frame" x="163" y="90" width="15" height="70"/>
+                                                        <rect key="frame" x="163" y="53" width="15" height="70"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="70"/>
                                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6d-pq-qQT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="61"/>
+                                                        <rect key="frame" x="0.0" y="-15" width="46" height="61"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="残り回数">
@@ -93,212 +83,89 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLC-3u-Ajc">
+                                                        <rect key="frame" x="0.0" y="44" width="58" height="86"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="残り時間">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="20" name="HiraginoSans-W3"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="LXv-tU-dGm"/>
+                                                    <constraint firstAttribute="width" constant="320" id="S4B-6X-0kb"/>
+                                                </constraints>
                                             </view>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDr-Mi-mSD">
-                                                <rect key="frame" x="3" y="43" width="94" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="DurationStepper:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="8k5-md-hlu"/>
-                                                </connections>
-                                            </textField>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" maximumValue="3600" translatesAutoresizingMaskIntoConstraints="NO" id="edX-L0-yAf">
-                                                <rect key="frame" x="3" y="81" width="94" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="dureationStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="w2P-lZ-rO5"/>
-                                                </connections>
-                                            </stepper>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rR2-zZ-NUe">
-                                                <rect key="frame" x="99" y="43" width="94" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEb-qH-sDt" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
+                                                <rect key="frame" x="100.5" y="30" width="80" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間(秒)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-IS-NgW">
-                                                <rect key="frame" x="8" y="14" width="97" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="秒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-IS-NgW">
+                                                <rect key="frame" x="100.5" y="4" width="80" height="21"/>
                                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="間隔(秒)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1J-gQ-WcW">
-                                                <rect key="frame" x="104" y="14" width="94" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="間隔(秒)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1J-gQ-WcW">
+                                                <rect key="frame" x="190.5" y="4" width="80.5" height="21"/>
                                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-7u-6i2">
-                                                <rect key="frame" x="3" y="145" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-7u-6i2">
+                                                <rect key="frame" x="10" y="65" width="30" height="30"/>
                                                 <state key="normal" title="1分">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="presetDuration60sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SXZ-d1-9nx"/>
+                                                    <action selector="presetMinute60sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Lk-ct-jfX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKO-fm-1cV">
-                                                <rect key="frame" x="3" y="118" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKO-fm-1cV">
+                                                <rect key="frame" x="10" y="100" width="30" height="30"/>
                                                 <state key="normal" title="2分">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="presetDuration120sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eop-R5-NtD"/>
+                                                    <action selector="presetMinute120sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXk-v4-ICK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-XA-HbV">
-                                                <rect key="frame" x="51" y="118" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-XA-HbV">
+                                                <rect key="frame" x="60.5" y="100" width="30" height="30"/>
                                                 <state key="normal" title="3分">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="presetDuration180sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="838-TS-ryL"/>
+                                                    <action selector="presetMinute180sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5d-iy-Dux"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDg-fi-sbm">
-                                                <rect key="frame" x="99" y="145" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="5秒">
-                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="presetInterval5sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sp8-R1-Cqp"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-qE-ZWk">
-                                                <rect key="frame" x="147" y="145" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="10秒">
-                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="presetInterval10sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QCn-ZG-2A1"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uw-e2-oJN">
-                                                <rect key="frame" x="99" y="118" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="20秒">
-                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="presetInterval20sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yiO-cP-WiF"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUL-hl-ZZ1">
-                                                <rect key="frame" x="147" y="118" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="30秒">
-                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="presetInterval30sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wu7-Dr-6mX"/>
-                                                </connections>
-                                            </button>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" maximumValue="3600" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-AN-Rxm">
-                                                <rect key="frame" x="99" y="81" width="94" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="intervalStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="EuY-XG-ISs"/>
-                                                </connections>
-                                            </stepper>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-a9-mYG">
-                                                <rect key="frame" x="195" y="43" width="92" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88E-TM-FEw">
-                                                <rect key="frame" x="195" y="14" width="35" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhU-RY-Uuf">
-                                                <rect key="frame" x="195" y="118" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="1回">
-                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="presetRap1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sal-F1-m9E"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N32-Ii-89i">
-                                                <rect key="frame" x="252" y="118" width="35" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="2回">
-                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="presetRap2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="42r-gy-BxY"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-C2-1R3">
-                                                <rect key="frame" x="198" y="145" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="3回">
-                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="presetRap3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGK-r4-txQ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-UM-nz4">
-                                                <rect key="frame" x="252" y="145" width="35" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="5回">
-                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="presetRap5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRk-my-Q09"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2L-BS-DSm">
-                                                <rect key="frame" x="51" y="145" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2L-BS-DSm">
+                                                <rect key="frame" x="55.5" y="65" width="35" height="30"/>
                                                 <state key="normal" title="1.5分">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="presetDuration90sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUB-Lx-Gxm"/>
+                                                    <action selector="presetMinute90sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kni-bh-IL8"/>
                                                 </connections>
                                             </button>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kl3-Pz-8F0">
-                                                <rect key="frame" x="195" y="81" width="94" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="rapStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yYo-SP-amx"/>
-                                                </connections>
-                                            </stepper>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVa-Im-2eR">
-                                                <rect key="frame" x="163" y="464" width="137" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                                <state key="normal" title="ストップ">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="stopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="foy-Wk-hH2"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-vG-rRh">
-                                                <rect key="frame" x="8" y="464" width="137" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-vG-rRh">
+                                                <rect key="frame" x="10" y="577" width="170.5" height="48"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <state key="normal" title="スタート">
@@ -308,50 +175,226 @@
                                                     <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAo-Mt-n0X"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-2S-ILP">
-                                                <rect key="frame" x="61" y="390" width="187" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVa-Im-2eR">
+                                                <rect key="frame" x="190.5" y="577" width="170.5" height="48"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                <state key="normal" title="ストップ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="stopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="foy-Wk-hH2"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bu-nh-dSU">
+                                                <rect key="frame" x="10" y="4" width="80.5" height="21"/>
+                                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxI-GL-4Q7" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="30" width="80.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sa9-5Y-L9p" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
+                                                <rect key="frame" x="190.5" y="30" width="80.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-ql-VPa" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
+                                                <rect key="frame" x="281" y="30" width="80" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDg-fi-sbm">
+                                                <rect key="frame" x="190.5" y="65" width="30" height="30"/>
+                                                <state key="normal" title="5秒">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presetInterval5sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sp8-R1-Cqp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-qE-ZWk">
+                                                <rect key="frame" x="239" y="65" width="32" height="30"/>
+                                                <state key="normal" title="10秒">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presetInterval10sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QCn-ZG-2A1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUL-hl-ZZ1">
+                                                <rect key="frame" x="237" y="100" width="34" height="30"/>
+                                                <state key="normal" title="30秒">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presetInterval30sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wu7-Dr-6mX"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88E-TM-FEw">
+                                                <rect key="frame" x="281" y="4" width="80" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhU-RY-Uuf">
+                                                <rect key="frame" x="281" y="65" width="30" height="30"/>
+                                                <state key="normal" title="1回">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presetRap1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sal-F1-m9E"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N32-Ii-89i">
+                                                <rect key="frame" x="331" y="65" width="30" height="30"/>
+                                                <state key="normal" title="2回">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presetRap2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="42r-gy-BxY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-C2-1R3">
+                                                <rect key="frame" x="281" y="100" width="30" height="30"/>
+                                                <state key="normal" title="3回">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presetRap3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGK-r4-txQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-UM-nz4">
+                                                <rect key="frame" x="331" y="100" width="30" height="30"/>
+                                                <state key="normal" title="5回">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presetRap5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRk-my-Q09"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uw-e2-oJN">
+                                                <rect key="frame" x="190.5" y="100" width="34" height="30"/>
+                                                <state key="normal" title="20秒">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presetInterval20sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yiO-cP-WiF"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="iIo-2S-ILP" firstAttribute="leading" secondItem="sc2-cG-KqR" secondAttribute="leading" constant="10" id="0Ld-oM-j3H"/>
+                                            <constraint firstItem="fCR-ql-VPa" firstAttribute="centerX" secondItem="88E-TM-FEw" secondAttribute="centerX" id="0lc-co-3zY"/>
+                                            <constraint firstItem="GxI-GL-4Q7" firstAttribute="width" secondItem="7Bu-nh-dSU" secondAttribute="width" id="28Z-Mz-SvT"/>
+                                            <constraint firstAttribute="trailing" secondItem="iIo-2S-ILP" secondAttribute="trailing" constant="10" id="3qd-1W-tz3"/>
+                                            <constraint firstItem="o2L-BS-DSm" firstAttribute="centerY" secondItem="bo9-7u-6i2" secondAttribute="centerY" id="43z-Vc-oMS"/>
+                                            <constraint firstItem="bo9-7u-6i2" firstAttribute="top" secondItem="GxI-GL-4Q7" secondAttribute="bottom" constant="5" id="4rX-iz-5al"/>
+                                            <constraint firstItem="hEb-qH-sDt" firstAttribute="height" secondItem="GxI-GL-4Q7" secondAttribute="height" id="8r9-fZ-dyS"/>
+                                            <constraint firstItem="AzT-vG-rRh" firstAttribute="leading" secondItem="sc2-cG-KqR" secondAttribute="leading" constant="10" id="AZX-U8-erO"/>
+                                            <constraint firstItem="o2L-BS-DSm" firstAttribute="trailing" secondItem="GxI-GL-4Q7" secondAttribute="trailing" id="BZ2-c2-7VO"/>
+                                            <constraint firstItem="N32-Ii-89i" firstAttribute="trailing" secondItem="fCR-ql-VPa" secondAttribute="trailing" id="EVn-Ol-gIL"/>
+                                            <constraint firstItem="sa9-5Y-L9p" firstAttribute="centerX" secondItem="Y1J-gQ-WcW" secondAttribute="centerX" id="Enn-JB-8Ot"/>
+                                            <constraint firstItem="rhU-RY-Uuf" firstAttribute="top" secondItem="fCR-ql-VPa" secondAttribute="bottom" constant="5" id="GMS-CB-AAX"/>
+                                            <constraint firstItem="bo9-7u-6i2" firstAttribute="leading" secondItem="GxI-GL-4Q7" secondAttribute="leading" id="GlS-Y3-Ika"/>
+                                            <constraint firstItem="GxI-GL-4Q7" firstAttribute="top" secondItem="7Bu-nh-dSU" secondAttribute="bottom" constant="5" id="Gyh-wq-BJJ"/>
+                                            <constraint firstItem="yf7-C2-1R3" firstAttribute="top" secondItem="rhU-RY-Uuf" secondAttribute="bottom" constant="5" id="HrX-hd-Ari"/>
+                                            <constraint firstItem="fCR-ql-VPa" firstAttribute="leading" secondItem="sa9-5Y-L9p" secondAttribute="trailing" constant="10" id="Ig7-di-lx7"/>
+                                            <constraint firstItem="fCR-ql-VPa" firstAttribute="top" secondItem="88E-TM-FEw" secondAttribute="bottom" constant="5" id="KM2-02-wz4"/>
+                                            <constraint firstItem="hEb-qH-sDt" firstAttribute="centerX" secondItem="dvx-IS-NgW" secondAttribute="centerX" id="Kcd-cU-hhd"/>
+                                            <constraint firstItem="qVa-Im-2eR" firstAttribute="centerY" secondItem="AzT-vG-rRh" secondAttribute="centerY" id="L71-oL-dHf"/>
+                                            <constraint firstItem="p6B-qE-ZWk" firstAttribute="trailing" secondItem="sa9-5Y-L9p" secondAttribute="trailing" id="Lu2-e6-Q6C"/>
+                                            <constraint firstItem="hEb-qH-sDt" firstAttribute="leading" secondItem="GxI-GL-4Q7" secondAttribute="trailing" constant="10" id="M4c-LH-Bx5"/>
+                                            <constraint firstItem="pUL-hl-ZZ1" firstAttribute="trailing" secondItem="sa9-5Y-L9p" secondAttribute="trailing" id="MXs-dk-QQb"/>
+                                            <constraint firstItem="yf7-C2-1R3" firstAttribute="leading" secondItem="fCR-ql-VPa" secondAttribute="leading" id="Ofn-Js-FPp"/>
+                                            <constraint firstItem="9Uw-e2-oJN" firstAttribute="leading" secondItem="vDg-fi-sbm" secondAttribute="leading" id="OiC-bz-gku"/>
+                                            <constraint firstItem="AzT-vG-rRh" firstAttribute="top" secondItem="rOg-Ky-yzx" secondAttribute="bottom" constant="10" id="Pev-GT-0mT"/>
+                                            <constraint firstItem="N32-Ii-89i" firstAttribute="top" secondItem="fCR-ql-VPa" secondAttribute="bottom" constant="5" id="PgY-ec-atk"/>
+                                            <constraint firstItem="lfv-XA-HbV" firstAttribute="trailing" secondItem="o2L-BS-DSm" secondAttribute="trailing" id="RaB-BN-rky"/>
+                                            <constraint firstItem="hEb-qH-sDt" firstAttribute="width" secondItem="dvx-IS-NgW" secondAttribute="width" id="RqU-6d-jHj"/>
+                                            <constraint firstItem="pUL-hl-ZZ1" firstAttribute="top" secondItem="p6B-qE-ZWk" secondAttribute="bottom" constant="5" id="TCH-Rf-Hjk"/>
+                                            <constraint firstItem="rOg-Ky-yzx" firstAttribute="top" secondItem="iIo-2S-ILP" secondAttribute="bottom" constant="10" id="TSx-Ui-cPf"/>
+                                            <constraint firstItem="GxI-GL-4Q7" firstAttribute="leading" secondItem="sc2-cG-KqR" secondAttribute="leading" constant="10" id="TVh-eJ-PXo"/>
+                                            <constraint firstAttribute="bottom" secondItem="AzT-vG-rRh" secondAttribute="bottom" constant="10" id="U0J-59-oE7"/>
+                                            <constraint firstItem="rOg-Ky-yzx" firstAttribute="centerX" secondItem="sc2-cG-KqR" secondAttribute="centerX" id="WBS-iU-fx8"/>
+                                            <constraint firstItem="qVa-Im-2eR" firstAttribute="leading" secondItem="AzT-vG-rRh" secondAttribute="trailing" constant="10" id="Xzl-H5-X2L"/>
+                                            <constraint firstItem="sa9-5Y-L9p" firstAttribute="leading" secondItem="hEb-qH-sDt" secondAttribute="trailing" constant="10" id="YRK-FR-LGq"/>
+                                            <constraint firstAttribute="trailing" secondItem="qVa-Im-2eR" secondAttribute="trailing" constant="10" id="YUN-5m-oej"/>
+                                            <constraint firstItem="lfv-XA-HbV" firstAttribute="centerY" secondItem="lKO-fm-1cV" secondAttribute="centerY" id="Yq8-2h-Hqz"/>
+                                            <constraint firstItem="sa9-5Y-L9p" firstAttribute="centerY" secondItem="GxI-GL-4Q7" secondAttribute="centerY" id="Zp8-Bc-Azg"/>
+                                            <constraint firstItem="vDg-fi-sbm" firstAttribute="leading" secondItem="sa9-5Y-L9p" secondAttribute="leading" id="aPA-bN-aBT"/>
+                                            <constraint firstItem="fCR-ql-VPa" firstAttribute="centerY" secondItem="GxI-GL-4Q7" secondAttribute="centerY" id="bMA-Zb-Xin"/>
+                                            <constraint firstItem="vDg-fi-sbm" firstAttribute="top" secondItem="sa9-5Y-L9p" secondAttribute="bottom" constant="5" id="bfs-qR-vLf"/>
+                                            <constraint firstItem="GxI-GL-4Q7" firstAttribute="top" secondItem="sc2-cG-KqR" secondAttribute="top" constant="30" id="dy1-JS-GZb"/>
+                                            <constraint firstItem="p6B-qE-ZWk" firstAttribute="top" secondItem="sa9-5Y-L9p" secondAttribute="bottom" constant="5" id="eJ3-rH-8Tb"/>
+                                            <constraint firstAttribute="trailing" secondItem="fCR-ql-VPa" secondAttribute="trailing" constant="10" id="hZU-vn-Tp1"/>
+                                            <constraint firstItem="fCR-ql-VPa" firstAttribute="width" secondItem="88E-TM-FEw" secondAttribute="width" id="he6-EM-Z52"/>
+                                            <constraint firstItem="9Uw-e2-oJN" firstAttribute="top" secondItem="vDg-fi-sbm" secondAttribute="bottom" constant="5" id="jI3-ze-9um"/>
+                                            <constraint firstItem="qVa-Im-2eR" firstAttribute="width" secondItem="AzT-vG-rRh" secondAttribute="width" id="kcA-7A-xUr"/>
+                                            <constraint firstItem="rOg-Ky-yzx" firstAttribute="centerX" secondItem="iIo-2S-ILP" secondAttribute="centerX" id="ku7-I0-7am"/>
+                                            <constraint firstItem="hEb-qH-sDt" firstAttribute="width" secondItem="GxI-GL-4Q7" secondAttribute="width" id="mTi-pu-9wQ"/>
+                                            <constraint firstItem="sa9-5Y-L9p" firstAttribute="width" secondItem="Y1J-gQ-WcW" secondAttribute="width" id="mUO-KV-sTw"/>
+                                            <constraint firstItem="qVa-Im-2eR" firstAttribute="height" secondItem="AzT-vG-rRh" secondAttribute="height" id="qDI-vV-2Si"/>
+                                            <constraint firstItem="nhH-UM-nz4" firstAttribute="trailing" secondItem="fCR-ql-VPa" secondAttribute="trailing" id="qfa-GS-wex"/>
+                                            <constraint firstItem="sa9-5Y-L9p" firstAttribute="width" secondItem="GxI-GL-4Q7" secondAttribute="width" id="qi7-nN-b8M"/>
+                                            <constraint firstItem="rhU-RY-Uuf" firstAttribute="leading" secondItem="fCR-ql-VPa" secondAttribute="leading" id="snL-do-bNk"/>
+                                            <constraint firstItem="sa9-5Y-L9p" firstAttribute="height" secondItem="GxI-GL-4Q7" secondAttribute="height" id="u7E-BR-bQT"/>
+                                            <constraint firstItem="sa9-5Y-L9p" firstAttribute="top" secondItem="Y1J-gQ-WcW" secondAttribute="bottom" constant="5" id="uIO-eV-Bgt"/>
+                                            <constraint firstItem="fCR-ql-VPa" firstAttribute="width" secondItem="GxI-GL-4Q7" secondAttribute="width" id="uKK-uZ-viC"/>
+                                            <constraint firstItem="fCR-ql-VPa" firstAttribute="height" secondItem="GxI-GL-4Q7" secondAttribute="height" id="uUk-rd-eKR"/>
+                                            <constraint firstItem="GxI-GL-4Q7" firstAttribute="centerX" secondItem="7Bu-nh-dSU" secondAttribute="centerX" id="vaB-9w-VAX"/>
+                                            <constraint firstItem="lKO-fm-1cV" firstAttribute="leading" secondItem="bo9-7u-6i2" secondAttribute="leading" id="vea-rG-K37"/>
+                                            <constraint firstItem="hEb-qH-sDt" firstAttribute="centerY" secondItem="GxI-GL-4Q7" secondAttribute="centerY" id="vrm-Ts-SW4"/>
+                                            <constraint firstItem="nhH-UM-nz4" firstAttribute="top" secondItem="N32-Ii-89i" secondAttribute="bottom" constant="5" id="wFw-Fn-h0t"/>
+                                            <constraint firstItem="lKO-fm-1cV" firstAttribute="top" secondItem="o2L-BS-DSm" secondAttribute="bottom" constant="5" id="xCB-ML-bGd"/>
+                                            <constraint firstItem="hEb-qH-sDt" firstAttribute="top" secondItem="dvx-IS-NgW" secondAttribute="bottom" constant="5" id="yHx-kx-lvS"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.84488341970000003" green="0.4849146299" blue="0.002708775985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sc2-cG-KqR" firstAttribute="centerX" secondItem="hOE-k4-Q29" secondAttribute="centerX" id="7dd-Kf-iJe"/>
+                                    <constraint firstItem="sc2-cG-KqR" firstAttribute="centerY" secondItem="hOE-k4-Q29" secondAttribute="centerY" id="BAB-b5-Tj4"/>
+                                    <constraint firstItem="sc2-cG-KqR" firstAttribute="top" secondItem="hOE-k4-Q29" secondAttribute="top" constant="3" id="GiP-NS-EZJ"/>
+                                    <constraint firstItem="sc2-cG-KqR" firstAttribute="top" secondItem="hOE-k4-Q29" secondAttribute="top" constant="3" id="L5F-Yk-l8a"/>
+                                    <constraint firstAttribute="trailing" secondItem="sc2-cG-KqR" secondAttribute="trailing" constant="3" id="kLn-r7-Eao"/>
+                                    <constraint firstItem="sc2-cG-KqR" firstAttribute="leading" secondItem="hOE-k4-Q29" secondAttribute="leading" constant="3" id="kNb-2d-ewj"/>
+                                    <constraint firstAttribute="bottom" secondItem="sc2-cG-KqR" secondAttribute="bottom" constant="3" id="tQG-lc-Hk7"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="hOE-k4-Q29" secondAttribute="trailing" constant="3" id="0dX-J3-04A"/>
-                            <constraint firstItem="hOE-k4-Q29" firstAttribute="top" secondItem="Y6E-6I-h6x" secondAttribute="bottom" constant="3" id="LcB-zl-og3"/>
-                            <constraint firstItem="hOE-k4-Q29" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="3" id="S9x-OX-gBT"/>
-                            <constraint firstItem="drP-On-4g4" firstAttribute="top" secondItem="hOE-k4-Q29" secondAttribute="bottom" constant="3" id="TRT-LH-ibf"/>
+                            <constraint firstItem="hOE-k4-Q29" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-17" id="8Xu-dU-Bln"/>
+                            <constraint firstItem="hOE-k4-Q29" firstAttribute="top" secondItem="Y6E-6I-h6x" secondAttribute="bottom" constant="3" id="NYn-IZ-eUJ"/>
+                            <constraint firstItem="hOE-k4-Q29" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i93-K0-JZg"/>
+                            <constraint firstItem="drP-On-4g4" firstAttribute="top" secondItem="hOE-k4-Q29" secondAttribute="bottom" constant="3" id="qzz-eO-ag0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="colon" destination="aJv-u6-7xX" id="hNP-fc-05U"/>
-                        <outlet property="duration" destination="qDr-Mi-mSD" id="fHy-lj-9G4"/>
-                        <outlet property="durationStepper" destination="edX-L0-yAf" id="rZm-I8-Ral"/>
-                        <outlet property="interval" destination="rR2-zZ-NUe" id="qKu-le-yO0"/>
-                        <outlet property="intervalStepper" destination="qyu-AN-Rxm" id="m84-fX-G5b"/>
+                        <outlet property="interval" destination="sa9-5Y-L9p" id="LpB-SM-s25"/>
                         <outlet property="message" destination="iIo-2S-ILP" id="hxI-Y1-Nfj"/>
                         <outlet property="minLeft" destination="X68-NX-SLE" id="NaG-2K-SGd"/>
-                        <outlet property="rap" destination="d3M-a9-mYG" id="Dea-4y-gWK"/>
+                        <outlet property="minute" destination="GxI-GL-4Q7" id="hLK-tz-7qN"/>
+                        <outlet property="rap" destination="fCR-ql-VPa" id="ccR-MH-dDy"/>
                         <outlet property="rapLeft" destination="Bkv-YM-TFb" id="CHd-Ut-22E"/>
-                        <outlet property="rapStepper" destination="kl3-Pz-8F0" id="7KL-Ly-X3A"/>
                         <outlet property="secLeft" destination="Bwy-TC-ys4" id="BkW-qe-E3Q"/>
+                        <outlet property="second" destination="hEb-qH-sDt" id="38S-12-sM4"/>
+                        <outlet property="startButton" destination="AzT-vG-rRh" id="C3o-84-Pay"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="387"/>
+            <point key="canvasLocation" x="175.36231884057972" y="347.28260869565219"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>
