@@ -25,7 +25,7 @@ class PickerTextField: UITextField, UIPickerViewDataSource, UIPickerViewDelegate
         super.init(coder: aDecoder)
     }
     
-    func setup(_ count:Int)
+    func setup(count:Int, selectedRow:Int)
     {
         self.count = count
 
@@ -38,11 +38,11 @@ class PickerTextField: UITextField, UIPickerViewDataSource, UIPickerViewDelegate
         picker.delegate = self
         picker.dataSource = self
         picker.showsSelectionIndicator = true
+        picker.selectRow(selectedRow, inComponent:0, animated:true)
         
-        let toolbar = UIToolbar(frame: CGRect(x:0, y:0, width:0, height:35))
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(PickerTextField.done))
+        let toolbar = UIToolbar(frame: CGRect(x:0, y:0, width:0, height:40))
         let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(PickerTextField.cancel))
-        toolbar.setItems([cancelItem, doneItem], animated: true)
+        toolbar.setItems([cancelItem], animated: true)
 
         self.inputView = self.picker
         self.inputAccessoryView = toolbar
@@ -61,7 +61,9 @@ class PickerTextField: UITextField, UIPickerViewDataSource, UIPickerViewDelegate
         return list[row]
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        self.endEditing(true)
         self.text = list[row].description
     }
     
@@ -81,12 +83,6 @@ class PickerTextField: UITextField, UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func cancel()
-    {
-        self.text = ""
-        self.endEditing(true)
-    }
-    
-    func done()
     {
         self.endEditing(true)
     }

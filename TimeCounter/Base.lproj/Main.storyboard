@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,7 +129,6 @@
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="presetDuration60sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SXZ-d1-9nx"/>
                                                     <action selector="presetMinute60sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Lk-ct-jfX"/>
                                                 </connections>
                                             </button>
@@ -140,7 +138,6 @@
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="presetDuration120sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eop-R5-NtD"/>
                                                     <action selector="presetMinute120sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXk-v4-ICK"/>
                                                 </connections>
                                             </button>
@@ -150,7 +147,6 @@
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="presetDuration180sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="838-TS-ryL"/>
                                                     <action selector="presetMinute180sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5d-iy-Dux"/>
                                                 </connections>
                                             </button>
@@ -160,7 +156,6 @@
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="presetDuration90sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUB-Lx-Gxm"/>
                                                     <action selector="presetMinute90sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kni-bh-IL8"/>
                                                 </connections>
                                             </button>
@@ -205,7 +200,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-ql-VPa" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-ql-VPa" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
                                                 <rect key="frame" x="281" y="30" width="80" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

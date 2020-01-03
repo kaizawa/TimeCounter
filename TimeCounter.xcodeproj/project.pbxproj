@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A4FF34F23BF14C4009392E5 /* TextSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FF34E23BF14C4009392E5 /* TextSpeaker.swift */; };
 		8A65238B1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A65238A1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf */; };
 		8ACC5DC61CDB14BB00C6D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC5DC51CDB14BB00C6D178 /* AppDelegate.swift */; };
 		8ACC5DC81CDB14BB00C6D178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC5DC71CDB14BB00C6D178 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A4FF34E23BF14C4009392E5 /* TextSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpeaker.swift; sourceTree = "<group>"; };
 		8A65238A1EE2815E00BA1776 /* DSEG7Classic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Bold.ttf"; sourceTree = "<group>"; };
 		8ACC5DC21CDB14B300C6D178 /* TimeCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACC5DC51CDB14BB00C6D178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				8ACC5DD11CDB14BB00C6D178 /* Info.plist */,
 				8ACC5DC71CDB14BB00C6D178 /* ViewController.swift */,
 				8AEE929423BD7CFF0085822A /* PickerTextField.swift */,
+				8A4FF34E23BF14C4009392E5 /* TextSpeaker.swift */,
 			);
 			path = TimeCounter;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4FF34F23BF14C4009392E5 /* TextSpeaker.swift in Sources */,
 				8ACC5DC81CDB14BB00C6D178 /* ViewController.swift in Sources */,
 				8ACC5DC61CDB14BB00C6D178 /* AppDelegate.swift in Sources */,
 				8AEE929523BD7CFF0085822A /* PickerTextField.swift in Sources */,
@@ -283,6 +287,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 469ZL76DAW;
 				INFOPLIST_FILE = TimeCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cafeform.RepTimeCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,6 +306,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 469ZL76DAW;
 				INFOPLIST_FILE = TimeCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cafeform.RepTimeCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";

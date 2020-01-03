@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         case INTERVAL
     }
     
-    //var stopped : Bool = false
     var beepSoundId : SystemSoundID = 1000 // default sound
     var status : Status = Status.STOPPED
     var timeCount:Int = 0
@@ -33,7 +32,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var colon: UILabel!
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var startButton: UIButton!
-
     @IBOutlet weak var minute: PickerTextField!
     @IBOutlet weak var second: PickerTextField!
     @IBOutlet weak var interval: PickerTextField!
@@ -42,10 +40,10 @@ class ViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.minute.setup(60)
-        self.second.setup(60)
-        self.interval.setup(60)
-        self.rap.setup(10)
+        self.minute.setup(count:60, selectedRow:(Int(self.minute.text!))!)
+        self.second.setup(count:60, selectedRow:(Int(self.second.text!))!)
+        self.interval.setup(count:60, selectedRow:(Int(self.interval.text!))!)
+        self.rap.setup(count:10, selectedRow:(Int(self.rap.text!))!)
         
         if let soundUrl = Bundle.main.url(forResource: "beep", withExtension: "mp3"){
             AudioServicesCreateSystemSoundID(soundUrl as CFURL, &beepSoundId)
@@ -68,6 +66,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startAction(_ sender: AnyObject) {
+        
 
         //stopped = false
         if(status == Status.STOPPED) {
@@ -78,6 +77,8 @@ class ViewController: UIViewController {
             self.timeCount = (Int(self.minute.text!))! * 60 + (Int(self.second.text!))!
             self.rapCount = (Int(self.rap.text!))!
             self.intervalCount = (UInt32(self.interval.text!))!
+            //not to sleep while running
+            UIApplication.shared.isIdleTimerDisabled = true
             status = Status.STARTED
         }
         else if(status == Status.STARTED) {
@@ -115,7 +116,8 @@ class ViewController: UIViewController {
                 })
                 
                 if(self.status == Status.STOPPED){
-                    break
+                    self.reset()
+                    return
                 } else if(self.status == Status.SUSPENDED){
                     return
                 }
@@ -129,29 +131,36 @@ class ViewController: UIViewController {
             self.message.text = ""
             self.intervalCount = (UInt32(self.interval.text!))!
             self.timeCount = (Int(self.minute.text!))! * 60 + (Int(self.second.text!))!
+            
+            OperationQueue().addOperation({() -> Void in
+                
+                self.countDown()
+            })
         })
             
-        AudioServicesPlaySystemSoundWithCompletion(self.beepSoundId){ () -> Void in }
+        AudioServicesPlaySystemSound(self.beepSoundId)
     }
     
     func countDown() {
         
-        while(self.rapCount > 0){
-                
-                // decrement rap count
-                OperationQueue.main.addOperation({() -> Void in
-                    self.rapLeft.text = self.rapCount.description
-                })
-
-                if(self.status == Status.INTERVAL) {
-
+        while(self.rapCount > 0)
+        {
+                if(self.status == Status.INTERVAL)
+                {
                     self.countDownInterval()
+                    return
                 }
             
-                while(self.timeCount >= 0){
-                    
+                // decrement rap count
+                OperationQueue.main.addOperation({() -> Void in
+                    self.rapLeft.text = (self.rapCount - 1).description
+                })
+
+                while(self.timeCount >= 0)
+                {
                     if(self.status == Status.STOPPED){
-                        break;
+                        self.reset()
+                        return
                     } else if (self.status == Status.SUSPENDED) {
                         return
                     }
@@ -178,16 +187,24 @@ class ViewController: UIViewController {
                     if(self.timeCount == 0){
                         break
                     }
+                    speechTimeLeft()
                     sleep(1)
                     self.timeCount -= 1
                 }
             
-                AudioServicesPlaySystemSoundWithCompletion(self.beepSoundId){ () -> Void in }
+                AudioServicesPlaySystemSound(self.beepSoundId)
 
-                self.status = Status.INTERVAL
                 self.rapCount -= 1
+                self.status = Status.INTERVAL
         }
         self.reset()
+    }
+    
+    func speechTimeLeft()
+    {
+        if(self.timeCount % 30 == 0 || self.timeCount == 20 || self.timeCount == 10) {
+            TextSpeaker.sharedInstance.append(text: "のこり" + self.timeCount.description + "秒です")
+        }
     }
     
     func reset () {
@@ -203,12 +220,17 @@ class ViewController: UIViewController {
             self.message.text = ""
             self.intervalCount = 0
             self.status = Status.STOPPED
+            // enable sleep if not running
+            UIApplication.shared.isIdleTimerDisabled = false
             self.startButton.setTitle("スタート", for: .normal)
         })
     }
 
     @IBAction func stopAction(_ sender: AnyObject) {
         
+        if(status == Status.SUSPENDED) {
+            reset()
+        }
         self.status = Status.STOPPED
     }
     
@@ -228,9 +250,17 @@ class ViewController: UIViewController {
         presetMinute(180)
     }
     
-    func presetMinute(_ sec : Double)
+    func presetMinute(_ val : Double)
     {
-        minute.picker.selectRow(Int(sec), inComponent: 0, animated: true)
+        let min:Int = Int(val) / 60
+        let sec:Int = Int(val) % 60
+        
+        OperationQueue.main.addOperation({() -> Void in
+            self.minute.text = min.description
+            self.second.text = sec.description
+        })
+        second.picker.selectRow(sec, inComponent: 0, animated: true)
+        minute.picker.selectRow(min, inComponent: 0, animated: true)
     }
 
     @IBAction func presetInterval5sec(_ sender: AnyObject) {
@@ -251,6 +281,9 @@ class ViewController: UIViewController {
     
     func presetInterval(_ sec : Double)
     {
+        OperationQueue.main.addOperation({() -> Void in
+            self.interval.text = Int(sec).description
+        })
         interval.picker.selectRow(Int(sec), inComponent: 0, animated: true)
     }
     
@@ -272,6 +305,9 @@ class ViewController: UIViewController {
 
     func presetRap(_ count : Double)
     {
+        OperationQueue.main.addOperation({() -> Void in
+            self.rap.text = Int(count).description
+        })
         rap.picker.selectRow(Int(count), inComponent: 0, animated: true)
     }
 }
