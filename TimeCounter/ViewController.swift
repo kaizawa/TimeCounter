@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     var rapCount:Int = 0
     var first:Bool = true
     var intervalCount: UInt32 = 0;
+    var speechEnabled:Bool = true
+    var audioPlayer: AVAudioPlayer!
 
     @IBOutlet weak var minLeft: UILabel!
     @IBOutlet weak var secLeft: UILabel!
@@ -36,27 +38,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var second: PickerTextField!
     @IBOutlet weak var interval: PickerTextField!
     @IBOutlet weak var rap: PickerTextField!
+    @IBOutlet weak var speechSwitch: UISwitch!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        speechSwitch.isOn = true
+        
         self.minute.setup(count:60, selectedRow:(Int(self.minute.text!))!)
         self.second.setup(count:60, selectedRow:(Int(self.second.text!))!)
         self.interval.setup(count:60, selectedRow:(Int(self.interval.text!))!)
         self.rap.setup(count:10, selectedRow:(Int(self.rap.text!))!)
         
-        if let soundUrl = Bundle.main.url(forResource: "beep", withExtension: "mp3"){
-            AudioServicesCreateSystemSoundID(soundUrl as CFURL, &beepSoundId)
-        }
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            // set category to play sound in background
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
-            // enable audio session
-            try audioSession.setActive(true)
-        } catch  {
-            fatalError("failed to setup audio session")
+        if let soundUrl = Bundle.main.url(forResource: "beep", withExtension: "mp3")
+        {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: soundUrl)
+            } catch {
+                fatalError("failed to setup audio session")
+            }
         }
     }
   
@@ -137,8 +138,13 @@ class ViewController: UIViewController {
                 self.countDown()
             })
         })
-            
-        AudioServicesPlaySystemSound(self.beepSoundId)
+        
+        playBeep()
+    }
+    
+    func playBeep() {
+        audioPlayer.currentTime = 0
+        audioPlayer.play()
     }
     
     func countDown() {
@@ -187,12 +193,14 @@ class ViewController: UIViewController {
                     if(self.timeCount == 0){
                         break
                     }
-                    speechTimeLeft()
+                    if(speechEnabled) {
+                        speechTimeLeft()
+                    }
                     sleep(1)
                     self.timeCount -= 1
                 }
             
-                AudioServicesPlaySystemSound(self.beepSoundId)
+                playBeep()
 
                 self.rapCount -= 1
                 self.status = Status.INTERVAL
@@ -202,8 +210,17 @@ class ViewController: UIViewController {
     
     func speechTimeLeft()
     {
+        let min = self.timeCount / 60
+        let sec = self.timeCount % 60
         if(self.timeCount % 30 == 0 || self.timeCount == 20 || self.timeCount == 10) {
-            TextSpeaker.sharedInstance.append(text: "のこり" + self.timeCount.description + "秒です")
+            if(min == 0) {
+                TextSpeaker.sharedInstance.append(text: "のこり" + self.timeCount.description + "秒です")
+            } else if (sec == 0){
+                TextSpeaker.sharedInstance.append(text: "のこり" + min.description + "分です")
+            } else {
+                TextSpeaker.sharedInstance.append(text: "のこり" + min.description + "分"
+                    + sec.description + "秒です")
+            }
         }
     }
     
@@ -262,6 +279,32 @@ class ViewController: UIViewController {
         second.picker.selectRow(sec, inComponent: 0, animated: true)
         minute.picker.selectRow(min, inComponent: 0, animated: true)
     }
+    
+    @IBAction func preset5sec(_ sender: AnyObject) {
+        presetSecond(5)
+    }
+    
+    @IBAction func preset10sec(_ sender: AnyObject) {
+        presetSecond(10)
+    }
+    
+    @IBAction func preset20sec(_ sender: AnyObject) {
+        presetSecond(20)
+    }
+    
+    @IBAction func preset30sec(_ sender: AnyObject) {
+        presetSecond(30)
+    }
+    
+    func presetSecond(_ val : Double)
+    {
+        let sec:Int = Int(val)
+        
+        OperationQueue.main.addOperation({() -> Void in
+            self.second.text = sec.description
+        })
+        second.picker.selectRow(sec, inComponent: 0, animated: true)
+    }
 
     @IBAction func presetInterval5sec(_ sender: AnyObject) {
         presetInterval(5)
@@ -309,6 +352,14 @@ class ViewController: UIViewController {
             self.rap.text = Int(count).description
         })
         rap.picker.selectRow(Int(count), inComponent: 0, animated: true)
+    }
+    @IBAction func speechSwitchAction(_ sender: UISwitch)
+    {
+        if(sender.isOn){
+            speechEnabled = true
+        } else {
+            speechEnabled = false
+        }
     }
 }
 
