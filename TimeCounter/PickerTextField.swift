@@ -37,7 +37,6 @@ class PickerTextField: UITextField, UIPickerViewDataSource, UIPickerViewDelegate
 
         picker.delegate = self
         picker.dataSource = self
-        picker.showsSelectionIndicator = true
         picker.selectRow(selectedRow, inComponent:0, animated:true)
         
         let toolbar = UIToolbar(frame: CGRect(x:0, y:0, width:0, height:40))
@@ -82,7 +81,7 @@ class PickerTextField: UITextField, UIPickerViewDataSource, UIPickerViewDelegate
         return getValue(self.picker.selectedRow(inComponent: 0))
     }
     
-    func cancel()
+    @objc func cancel()
     {
         self.endEditing(true)
     }

@@ -212,7 +212,7 @@ class ViewController: UIViewController {
     {
         let min = self.timeCount / 60
         let sec = self.timeCount % 60
-        if(self.timeCount % 30 == 0 || self.timeCount == 20 || self.timeCount == 10) {
+        if(self.timeCount % 30 == 0 || self.timeCount == 20 || self.timeCount == 10 || self.timeCount == 5) {
             if(min == 0) {
                 TextSpeaker.sharedInstance.append(text: "のこり" + self.timeCount.description + "秒です")
             } else if (sec == 0){
@@ -302,8 +302,10 @@ class ViewController: UIViewController {
         
         OperationQueue.main.addOperation({() -> Void in
             self.second.text = sec.description
+            self.minute.text = "0"
         })
         second.picker.selectRow(sec, inComponent: 0, animated: true)
+        minute.picker.selectRow(0, inComponent: 0, animated: true)
     }
 
     @IBAction func presetInterval5sec(_ sender: AnyObject) {
