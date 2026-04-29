@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -22,23 +21,23 @@
                         <viewControllerLayoutGuide type="bottom" id="drP-On-4g4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-k4-Q29">
-                                <rect key="frame" x="-1" y="23" width="377" height="641"/>
+                                <rect key="frame" x="3" y="127" width="434" height="758"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sc2-cG-KqR">
-                                        <rect key="frame" x="3" y="3" width="371" height="635"/>
+                                        <rect key="frame" x="3" y="3" width="428" height="752"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-2S-ILP">
-                                                <rect key="frame" x="10" y="427" width="351" height="0.0"/>
+                                                <rect key="frame" x="10" y="544" width="408" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOg-Ky-yzx">
-                                                <rect key="frame" x="25.5" y="437" width="320" height="130"/>
+                                                <rect key="frame" x="54" y="554" width="320" height="130"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwy-TC-ys4">
                                                         <rect key="frame" x="167" y="35" width="132" height="104"/>
@@ -118,34 +117,33 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="LXv-tU-dGm"/>
                                                     <constraint firstAttribute="width" constant="320" id="S4B-6X-0kb"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEb-qH-sDt" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
-                                                <rect key="frame" x="100.5" y="30" width="80" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="114.66666666666669" y="30" width="94.333333333333314" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="秒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-IS-NgW">
-                                                <rect key="frame" x="100.5" y="4" width="80" height="21"/>
+                                                <rect key="frame" x="114.66666666666669" y="4" width="94.333333333333314" height="21"/>
                                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="間隔(秒)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1J-gQ-WcW">
-                                                <rect key="frame" x="190.5" y="4" width="80.5" height="21"/>
+                                                <rect key="frame" x="218.99999999999997" y="4" width="94.666666666666657" height="21"/>
                                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-7u-6i2">
-                                                <rect key="frame" x="10" y="65" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-7u-6i2">
+                                                <rect key="frame" x="10" y="69" width="30" height="30"/>
                                                 <state key="normal" title="1分">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -153,8 +151,8 @@
                                                     <action selector="presetMinute60sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Lk-ct-jfX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKO-fm-1cV">
-                                                <rect key="frame" x="10" y="100" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKO-fm-1cV">
+                                                <rect key="frame" x="10" y="104" width="30" height="30"/>
                                                 <state key="normal" title="2分">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -162,8 +160,8 @@
                                                     <action selector="presetMinute120sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXk-v4-ICK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-XA-HbV">
-                                                <rect key="frame" x="60.5" y="100" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-XA-HbV">
+                                                <rect key="frame" x="74.666666666666671" y="104" width="30" height="30"/>
                                                 <state key="normal" title="3分">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -171,8 +169,8 @@
                                                     <action selector="presetMinute180sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5d-iy-Dux"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2L-BS-DSm">
-                                                <rect key="frame" x="55.5" y="65" width="35" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2L-BS-DSm">
+                                                <rect key="frame" x="68.666666666666671" y="69" width="36" height="30"/>
                                                 <state key="normal" title="1.5分">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -180,8 +178,8 @@
                                                     <action selector="presetMinute90sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kni-bh-IL8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-vG-rRh">
-                                                <rect key="frame" x="10" y="577" width="170.5" height="48"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-vG-rRh">
+                                                <rect key="frame" x="10" y="694" width="199" height="48"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <state key="normal" title="スタート">
@@ -191,8 +189,8 @@
                                                     <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAo-Mt-n0X"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVa-Im-2eR">
-                                                <rect key="frame" x="190.5" y="577" width="170.5" height="48"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVa-Im-2eR">
+                                                <rect key="frame" x="219" y="694" width="199" height="48"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <state key="normal" title="ストップ">
@@ -203,32 +201,29 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bu-nh-dSU">
-                                                <rect key="frame" x="10" y="4" width="80.5" height="21"/>
+                                                <rect key="frame" x="10" y="4" width="94.666666666666671" height="21"/>
                                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxI-GL-4Q7" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="30" width="80.5" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="10" y="30" width="94.666666666666671" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sa9-5Y-L9p" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
-                                                <rect key="frame" x="190.5" y="30" width="80.5" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="218.99999999999997" y="30" width="94.666666666666657" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-ql-VPa" customClass="PickerTextField" customModule="TimeCounter" customModuleProvider="target">
-                                                <rect key="frame" x="281" y="30" width="80" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="323.66666666666669" y="30" width="94.333333333333314" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDg-fi-sbm">
-                                                <rect key="frame" x="190.5" y="65" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDg-fi-sbm">
+                                                <rect key="frame" x="219" y="69" width="30" height="30"/>
                                                 <state key="normal" title="5秒">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -236,8 +231,8 @@
                                                     <action selector="presetInterval5sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sp8-R1-Cqp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-qE-ZWk">
-                                                <rect key="frame" x="239" y="65" width="32" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-qE-ZWk">
+                                                <rect key="frame" x="281.66666666666669" y="69" width="32" height="30"/>
                                                 <state key="normal" title="10秒">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -245,8 +240,8 @@
                                                     <action selector="presetInterval10sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QCn-ZG-2A1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUL-hl-ZZ1">
-                                                <rect key="frame" x="237" y="100" width="34" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUL-hl-ZZ1">
+                                                <rect key="frame" x="278.66666666666669" y="104" width="35" height="30"/>
                                                 <state key="normal" title="30秒">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -255,13 +250,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88E-TM-FEw">
-                                                <rect key="frame" x="281" y="4" width="80" height="21"/>
+                                                <rect key="frame" x="323.66666666666669" y="4" width="94.333333333333314" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhU-RY-Uuf">
-                                                <rect key="frame" x="281" y="65" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhU-RY-Uuf">
+                                                <rect key="frame" x="323.66666666666669" y="69" width="30" height="30"/>
                                                 <state key="normal" title="1回">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -269,8 +264,8 @@
                                                     <action selector="presetRap1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sal-F1-m9E"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N32-Ii-89i">
-                                                <rect key="frame" x="331" y="65" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N32-Ii-89i">
+                                                <rect key="frame" x="388" y="69" width="30" height="30"/>
                                                 <state key="normal" title="2回">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -278,8 +273,8 @@
                                                     <action selector="presetRap2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="42r-gy-BxY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-C2-1R3">
-                                                <rect key="frame" x="281" y="100" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-C2-1R3">
+                                                <rect key="frame" x="323.66666666666669" y="104" width="30" height="30"/>
                                                 <state key="normal" title="3回">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -287,8 +282,8 @@
                                                     <action selector="presetRap3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGK-r4-txQ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-UM-nz4">
-                                                <rect key="frame" x="331" y="100" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-UM-nz4">
+                                                <rect key="frame" x="388" y="104" width="30" height="30"/>
                                                 <state key="normal" title="5回">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -296,8 +291,8 @@
                                                     <action selector="presetRap5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRk-my-Q09"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uw-e2-oJN">
-                                                <rect key="frame" x="190.5" y="100" width="34" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uw-e2-oJN">
+                                                <rect key="frame" x="219" y="104" width="34" height="30"/>
                                                 <state key="normal" title="20秒">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -305,8 +300,8 @@
                                                     <action selector="presetInterval20sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yiO-cP-WiF"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yku-XN-sSf">
-                                                <rect key="frame" x="100.5" y="65" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yku-XN-sSf">
+                                                <rect key="frame" x="114.66666666666669" y="69" width="30" height="30"/>
                                                 <state key="normal" title="5秒">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -314,8 +309,8 @@
                                                     <action selector="preset5sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37J-gj-RV1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-Jv-l8X">
-                                                <rect key="frame" x="148.5" y="65" width="32" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-Jv-l8X">
+                                                <rect key="frame" x="177" y="69" width="32" height="30"/>
                                                 <state key="normal" title="10秒">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -323,8 +318,8 @@
                                                     <action selector="preset10sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ve8-wf-b2T"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-qS-dn3">
-                                                <rect key="frame" x="146.5" y="100" width="34" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-qS-dn3">
+                                                <rect key="frame" x="174" y="104" width="35" height="30"/>
                                                 <state key="normal" title="30秒">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -332,8 +327,8 @@
                                                     <action selector="preset30sec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Qz-9F-R7t"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-ks-qaK">
-                                                <rect key="frame" x="100.5" y="100" width="34" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-ks-qaK">
+                                                <rect key="frame" x="114.66666666666669" y="104" width="34" height="30"/>
                                                 <state key="normal" title="20秒">
                                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -458,4 +453,9 @@
             <point key="canvasLocation" x="175.19999999999999" y="346.77661169415296"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

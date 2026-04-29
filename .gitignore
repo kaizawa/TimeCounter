@@ -26,3 +26,6 @@
 *.exe
 *.out
 *.app
+
+# Claude Code MCP config (contains secrets)
+.mcp.json
